@@ -1,11 +1,21 @@
 <p>heroes works!</p>
-<h2>{{hero.name | uppercase}} Details</h2>
+<h2>{{heroes1[0].name | uppercase}} Details</h2>
 <!-- <div><span>id: </span>{{hero.id}}</div>
 <div><span>strengh: </span>{{hero.strenght}}</div>
 <div><span>abilities: </span>{{hero.abilities}}</div> -->
+<div>
+    <h2>My Heroes</h2>
+    <ul class="heroes">
+    <li *ngFor="let hero of heroes1">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+    </ul>
+</div>
 
 <div>
     <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
+        <!-- two way data biding -->
+      <input [(ngModel)]="heroes1[0].name" placeholder="name"/>
     </label>
   </div>
+
