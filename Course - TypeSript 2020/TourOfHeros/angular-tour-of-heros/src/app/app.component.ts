@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-tour-of-heros';
+  title = 'Tour of Heros';
 }
+
+function newFunction(): string {
+  return "Maria";
+}
+
