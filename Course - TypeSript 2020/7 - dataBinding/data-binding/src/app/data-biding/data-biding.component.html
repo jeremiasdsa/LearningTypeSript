@@ -13,3 +13,23 @@
         <img [src] = "urlImage">
     </article>
 </section>
+
+
+<section>
+    <h3>Class e Style Binding</h3>
+    <div>
+        Selecione uma classe: 
+        <select #classe (change)="0">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-info">Info</option>
+            <option value="alert-warning">Alerta</option>
+            <option value="alert-danger">Erro</option>
+        </select>
+        <br><br>
+        <div class="alert alert-success" role="alert">...</div>
+        <div class="alert alert-info" role="alert">...</div>
+        <div class="alert alert-warning" role="alert">...</div>
+        <div class="alert alert-danger" role="alert">...</div>
+    </div>
+
+</section>
