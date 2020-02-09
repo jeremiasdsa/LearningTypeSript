@@ -8,6 +8,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroTopComponent } from './hero-top/hero-top.component';
 
+import { HeroService } from './hero.service';
+
 
 
 @NgModule({
@@ -23,6 +25,9 @@ import { HeroTopComponent } from './hero-top/hero-top.component';
   exports:[
     HeroesComponent
     // HeroDetailComponent exportanto aqui, deixa visível para quem importar o Modulo
+  ],
+  providers:[
+    HeroService
   ]
 })
 export class HeroModule { }
