@@ -26,10 +26,30 @@
             <option value="alert-danger">Erro</option>
         </select>
         <br><br>
-        <div class="alert alert-success" role="alert">...</div>
-        <div class="alert alert-info" role="alert">...</div>
+
+        <!-- class biding -->
+        <div class="alert {{ classe.value }}" role="alert">
+            texto colorido acordo selection
+        </div>
+
+        <!-- property biding com classe -->
+        <div class="alert alert-success" role="alert"
+            [class.alert-success]="classe.value ==='alert-success'">
+            Sucesso
+        </div>
+        <div class="alert alert-info" role="alert"
+            [class.alert-info]="classe.value ==='alert-info'">
+            Info
+        </div>
         <div class="alert alert-warning" role="alert">...</div>
         <div class="alert alert-danger" role="alert">...</div>
+
+
+        <!-- style biding.. aparece caso a classe seja erro -->
+        <div class="alert alert-danger" role="alert"
+            [style.display]="classe.value ==='alert-danger' ? 'block' : 'none'">
+            Danger
+        </div>
     </div>
 
 </section>
